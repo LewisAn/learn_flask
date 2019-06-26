@@ -1,4 +1,4 @@
-2019-06-26 16:00:18,130 ERROR: Exception on /index [GET] [in /Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py:1780]
+2019-06-26 15:59:59,696 ERROR: Exception on /index [GET] [in /Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py:1780]
 Traceback (most recent call last):
   File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
@@ -29,7 +29,7 @@ Traceback (most recent call last):
   File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/wtforms/fields/core.py", line 353, in bind
     return self.field_class(*self.args, **kw)
 TypeError: __init__() got an unexpected keyword argument 'validatos'
-2019-06-26 16:00:18,539 ERROR: Exception on /index [GET] [in /Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py:1780]
+2019-06-26 16:00:16,004 ERROR: Exception on /user/lewis [GET] [in /Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py:1780]
 Traceback (most recent call last):
   File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
@@ -60,7 +60,38 @@ Traceback (most recent call last):
   File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/wtforms/fields/core.py", line 353, in bind
     return self.field_class(*self.args, **kw)
 TypeError: __init__() got an unexpected keyword argument 'validatos'
-2019-06-26 16:00:18,750 ERROR: Exception on /index [GET] [in /Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py:1780]
+2019-06-26 16:00:16,954 ERROR: Exception on /index [GET] [in /Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py:1780]
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1830, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2106, in preprocess_request
+    rv = func()
+  File "/Users/apple/Desktop/learn_flask/app/main/routes.py", line 19, in before_request
+    g.search_form = SearchForm()
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/wtforms/form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/Users/apple/Desktop/learn_flask/app/main/forms.py", line 41, in __init__
+    super(SearchForm, self).__init__(*args, **kwargs)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask_wtf/form.py", line 88, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/wtforms/form.py", line 272, in __init__
+    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/wtforms/form.py", line 52, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/wtforms/meta.py", line 27, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/wtforms/fields/core.py", line 353, in bind
+    return self.field_class(*self.args, **kw)
+TypeError: __init__() got an unexpected keyword argument 'validatos'
+2019-06-26 16:00:17,666 ERROR: Exception on /explore [GET] [in /Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py:1780]
 Traceback (most recent call last):
   File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()

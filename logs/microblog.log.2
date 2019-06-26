@@ -1,4 +1,62 @@
-2019-06-26 16:00:18,130 ERROR: Exception on /index [GET] [in /Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py:1780]
+2019-06-26 14:54:14,050 INFO: Microblog startup [in /Users/apple/Desktop/learn_flask/app/__init__.py:74]
+2019-06-26 14:54:24,523 ERROR: Exception on / [GET] [in /Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py:1780]
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/apple/Desktop/learn_flask/app/main/routes.py", line 46, in index
+    prev_url=prev_url)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/apple/Desktop/learn_flask/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/apple/Desktop/learn_flask/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
+    {% block navbar %}
+  File "/Users/apple/Desktop/learn_flask/app/templates/base.html", line 37, in block "navbar"
+    <a class="navbar-brand" href="{{ url_for('index') }}">Microblog</a>
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2080, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 2007, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
+2019-06-26 14:58:29,224 INFO: Microblog startup [in /Users/apple/Desktop/learn_flask/app/__init__.py:74]
+2019-06-26 15:59:34,923 INFO: Microblog startup [in /Users/apple/Desktop/learn_flask/app/__init__.py:77]
+2019-06-26 15:59:50,274 ERROR: Exception on / [GET] [in /Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py:1780]
 Traceback (most recent call last):
   File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()
@@ -29,38 +87,7 @@ Traceback (most recent call last):
   File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/wtforms/fields/core.py", line 353, in bind
     return self.field_class(*self.args, **kw)
 TypeError: __init__() got an unexpected keyword argument 'validatos'
-2019-06-26 16:00:18,539 ERROR: Exception on /index [GET] [in /Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py:1780]
-Traceback (most recent call last):
-  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1737, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
-    raise value
-  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1830, in full_dispatch_request
-    rv = self.preprocess_request()
-  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2106, in preprocess_request
-    rv = func()
-  File "/Users/apple/Desktop/learn_flask/app/main/routes.py", line 19, in before_request
-    g.search_form = SearchForm()
-  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/wtforms/form.py", line 212, in __call__
-    return type.__call__(cls, *args, **kwargs)
-  File "/Users/apple/Desktop/learn_flask/app/main/forms.py", line 41, in __init__
-    super(SearchForm, self).__init__(*args, **kwargs)
-  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask_wtf/form.py", line 88, in __init__
-    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
-  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/wtforms/form.py", line 272, in __init__
-    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
-  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/wtforms/form.py", line 52, in __init__
-    field = meta.bind_field(self, unbound_field, options)
-  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/wtforms/meta.py", line 27, in bind_field
-    return unbound_field.bind(form=form, **options)
-  File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/wtforms/fields/core.py", line 353, in bind
-    return self.field_class(*self.args, **kw)
-TypeError: __init__() got an unexpected keyword argument 'validatos'
-2019-06-26 16:00:18,750 ERROR: Exception on /index [GET] [in /Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py:1780]
+2019-06-26 15:59:58,953 ERROR: Exception on /index [GET] [in /Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py:1780]
 Traceback (most recent call last):
   File "/Users/apple/Desktop/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
     response = self.full_dispatch_request()

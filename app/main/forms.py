@@ -28,7 +28,7 @@ class PostForm(FlaskForm):
     submit = SubmitField(_l('Submit'))
     
 class SearchForm(FlaskForm):
-    q = StringField(_l('Search'), validatos=[DataRequired()])
+    q = StringField(_l('Search'), validators=[DataRequired()])
     
     def __init__(self, *args, **kwargs):
         if 'formdata' not in kwargs:
