@@ -24,6 +24,14 @@
     {% for post in posts %}
         {% include '_post.html' %}
     {% endfor %}
+    {% if user != current_user %}
+    <p>
+        <a href="{{ url_for('main.send_message',
+                            recipient=user.username) }}">
+            {{ _('Send private message') }}
+        </a>
+    </p>
+    {% endif %}
     <nav aria-label="...">
         <ul class="pager">
             <li class="previous{% if not prev_url %} disabled{% endif %}">
